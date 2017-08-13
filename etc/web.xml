@@ -1,0 +1,50 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:shemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
+         version="2.4">
+    <context-param>
+        <param-name>headerinfo</param-name>
+        <param-value>i wrote this context init parameter</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>com.example.ActionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>/action.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>dog</servlet-name>
+        <servlet-class>com.example.DogServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>dog</servlet-name>
+        <url-pattern>/dog.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ELtest</servlet-name>
+        <servlet-class>com.example.test380.ELTestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ELtest</servlet-name>
+        <url-pattern>/eltest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>tagTest</servlet-name>
+        <servlet-class>com.example.TagsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>tagTest</servlet-name>
+        <url-pattern>/tags.do</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
